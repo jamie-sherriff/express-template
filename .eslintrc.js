@@ -4,15 +4,13 @@ module.exports = {
     es2020: true,
     node: true,
   },
-  extends: [
-    'plugin:prettier/recommended',
-    'airbnb-base',
-  ],
-  plugins: ["prettier"],
+  extends: ['plugin:prettier/recommended', 'airbnb-base'],
+  plugins: ['prettier'],
   parserOptions: {
     ecmaVersion: 12,
   },
   rules: {
-    "prettier/prettier": "error"
+    'prettier/prettier': 'error',
+    'arrow-body-style': 'off',
   },
 };

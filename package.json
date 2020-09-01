@@ -12,11 +12,14 @@
     "dotenv": "^8.2.0",
     "eslint-plugin-prettier": "^3.1.4",
     "express": "~4.16.1",
+    "faker": "^5.1.0",
     "jest": "^26.4.2",
+    "knex": "^0.21.5",
     "lodash": "^4.17.20",
     "morgan": "~1.9.1",
     "prettier": "^2.1.1",
     "showdown": "^1.9.1",
+    "sqlite3": "^5.0.0",
     "supertest": "^4.0.2"
   },
   "devDependencies": {
