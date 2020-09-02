@@ -1,10 +1,11 @@
 // const path = require('path');
-const knex = require('knex')({
-  client: 'sqlite3',
-  connection: {
-    filename: './data.db',
-  },
-  useNullAsDefault: true,
-});
+const knex = require('knex');
+const config = require('./knexfile');
 
-module.exports = knex;
+let db = null;
+if (process.env.NODE_ENV === 'test') {
+  db = knex(config.test);
+} else {
+  db = knex(config.default);
+}
+module.exports = db;

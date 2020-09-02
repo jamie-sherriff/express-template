@@ -15,7 +15,9 @@ const usersRouter = require('./routes/users');
 const userRouter = require('./routes/user');
 const usersDB = require('./db/users');
 
-usersDB.init();
+function initialise() {
+  return Promise.all([usersDB.init()]);
+}
 
 const app = express();
 let markdownHtml;
@@ -31,12 +33,14 @@ app.use('/user', userRouter);
 
 app.get('/', async (req, res, next) => {
   if (!markdownHtml) {
-    const markdownString = await fs.readFile(path.join(__dirname, 'README.md'), 'utf-8');
+    const markdownString = await fs.readFile(path.join(__dirname, '..', 'README.md'), 'utf-8');
     markdownHtml = converter.makeHtml(markdownString);
   }
   res.send(markdownHtml);
 });
 
 // app.use('/', indexRouter);
-
-module.exports = app;
+module.exports = {
+  app,
+  initialise,
+};
