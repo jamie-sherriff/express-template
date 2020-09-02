@@ -1,8 +1,8 @@
 const request = require('supertest');
-const { app, initialise } = require('../../src/app');
+const { app, initialize } = require('../../src/app');
 
 beforeAll(() => {
-  return initialise();
+  return initialize();
 });
 
 describe('Test the users endpoint', () => {

@@ -10,12 +10,12 @@ const showdown = require('showdown');
 const converter = new showdown.Converter();
 
 const indexRouter = require('./routes/index');
-
+const startApp = require('./utils/www');
 const usersRouter = require('./routes/users');
 const userRouter = require('./routes/user');
 const usersDB = require('./db/users');
 
-function initialise() {
+function initialize() {
   return Promise.all([usersDB.init()]);
 }
 
@@ -39,8 +39,17 @@ app.get('/', async (req, res, next) => {
   res.send(markdownHtml);
 });
 
+async function run() {
+  try {
+    await initialize();
+    startApp(app);
+  } catch (error) {
+    console.error(error);
+  }
+}
 // app.use('/', indexRouter);
 module.exports = {
   app,
-  initialise,
+  initialize,
+  run,
 };
