@@ -1,28 +1,29 @@
+# Node.js express template
+
 <!-- TABLE OF CONTENTS -->
 
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
-- [About The Project](#about-the-project)
-  - [Built With](#built-with)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Running in development environment](#running-in-development-environment)
-- [Running tests](#running-tests)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+- [Node.js express template](#nodejs-express-template)
+  - [Table of Contents](#table-of-contents)
+  - [About The Project](#about-the-project)
+    - [Built With](#built-with)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+  - [Usage](#usage)
+  - [Running in development environment](#running-in-development-environment)
+  - [Running tests](#running-tests)
+  - [Roadmap](#roadmap)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Contact](#contact)
 
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo_name`,
+Simple template application that provides a skelton framework with Express that consists of database integration,tests and a client
 
 ### Built With
 
@@ -30,7 +31,7 @@ Here's a blank template to get started:
 - [Express](https://expressjs.com/)
 - [Sqlite](https://sqlite.org/)
 - [Jest](https://jestjs.io/)
-- Many other open source libararies and please refer to the `package.json` for more details
+- Many other open source libraries and please refer to the `package.json` for more details
 <!-- GETTING STARTED -->
 
 ## Getting Started
@@ -41,12 +42,6 @@ To get a local copy up and running follow these simple steps.
 
 This is an example of how to list things you need to use the software and how to install them.
 
-- npm
-
-```sh
-npm install npm@latest -g
-```
-
 - Node.JS
 
 ```
@@ -54,12 +49,18 @@ npm install npm@latest -g
   14.x Should also be fine as well as 10.x
 ```
 
+- npm
+
+```sh
+npm install npm@latest -g
+```
+
 ### Installation
 
 1. Clone the repo
 
 ```sh
-git clone https://github.com/jamie-sherriff//repo_name.git
+git clone https://github.com/jamie-sherriff/express-template.git
 ```
 
 2. Install NPM packages
@@ -74,10 +75,9 @@ npm install
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
-
 ```sh
-npm start
+npm start (server)
+npm run client
 ```
 
 <!-- USAGE EXAMPLES -->
@@ -124,4 +124,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Project Link: [https://github.com/jamie-sherriff//repo_name](https://github.com/jamie-sherriff//repo_name)
+Project Link: [https://github.com/jamie-sherriff/express-template](https://github.com/jamie-sherriff/express-template)
