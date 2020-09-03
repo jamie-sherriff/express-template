@@ -8,7 +8,7 @@ module.exports = {
     },
   },
   default: {
-    debug: true,
+    // debug: true,
     client: 'sqlite3',
     connection: {
       filename: './data.db',

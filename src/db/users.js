@@ -1,6 +1,7 @@
 /* eslint-disable consistent-return */
 const db = require('./db.js');
 
+const tableName = 'users';
 const users = {
   init: () => {
     return db.schema.hasTable('users').then((exists) => {
@@ -17,28 +18,34 @@ const users = {
   insert: (newUser) => {
     return db
       .insert(newUser)
-      .into('users')
+      .into(tableName)
       .then((rows) => {
         return rows[0];
       });
   },
   get: (username) => {
-    return db.select('*').from('users').where('first_name', 'like', username);
+    return db.select('*').from(tableName).where('first_name', 'like', username);
   },
   getById: (id) => {
     return db
       .select('*')
-      .from('users')
+      .from(tableName)
       .where('id', id)
       .then((rows) => rows[0]);
   },
   getAll: () => {
     return db
       .select('*')
-      .from('users')
+      .from(tableName)
       .then((rows) => {
         return rows;
       });
+  },
+  updateUser: (id, updatedUser) => {
+    return db(tableName).where({ id }).update(updatedUser);
+  },
+  deleteUser: (id) => {
+    return db(tableName).where('id', id).del().returning('*');
   },
   //   get(username) {
 

@@ -9,7 +9,7 @@
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
-- [Debugging](#debugging)
+- [Running in development environment](#running-in-development-environment)
 - [Running tests](#running-tests)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
@@ -22,14 +22,15 @@
 
 Here's a blank template to get started:
 **To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo_name`, `twitter_handle`, `email`
+`github_username`, `repo_name`,
 
 ### Built With
 
-- []()
-- []()
-- []()
-
+- [Node.js](https://nodejs.org/)
+- [Express](https://expressjs.com/)
+- [Sqlite](https://sqlite.org/)
+- [Jest](https://jestjs.io/)
+- Many other open source libararies and please refer to the `package.json` for more details
 <!-- GETTING STARTED -->
 
 ## Getting Started
@@ -58,7 +59,7 @@ npm install npm@latest -g
 1. Clone the repo
 
 ```sh
-git clone https://github.com/github_username/repo_name.git
+git clone https://github.com/jamie-sherriff//repo_name.git
 ```
 
 2. Install NPM packages
@@ -81,11 +82,13 @@ npm start
 
 <!-- USAGE EXAMPLES -->
 
-## Debugging
+## Running in development environment
 
 ```sh
 npm run dev
 ```
+
+Set `NODE_ENV` to `TEST` to enable in-memory temporary database
 
 ## Running tests
 
@@ -97,7 +100,7 @@ npm test
 
 ## Roadmap
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/jamie-sherriff/repo_name/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 
@@ -121,6 +124,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/jamie-sherriff//repo_name](https://github.com/jamie-sherriff//repo_name)
