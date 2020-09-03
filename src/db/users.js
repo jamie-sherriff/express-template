@@ -26,7 +26,11 @@ const users = {
     return db.select('*').from('users').where('first_name', 'like', username);
   },
   getById: (id) => {
-    return db.select('*').from('users').where('id', id);
+    return db
+      .select('*')
+      .from('users')
+      .where('id', id)
+      .then((rows) => rows[0]);
   },
   getAll: () => {
     return db

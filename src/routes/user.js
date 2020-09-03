@@ -7,8 +7,8 @@ const usersDB = require('../db/users');
 router.get('/:id', async (req, res) => {
   if (req.params.id && Number.isSafeInteger(Number.parseInt(req.params.id, 10))) {
     const user = await usersDB.getById(Number.parseInt(req.params.id, 10));
-    if (user && user.length > 0) {
-      res.send(user[0]);
+    if (user && typeof user === 'object') {
+      res.send(user);
     } else {
       res.status(400).json({ message: 'no user found' });
     }
@@ -20,14 +20,12 @@ router.get('/:id', async (req, res) => {
 });
 
 /* POST users listing. */
-router.post('/', async (req, res, next) => {
+router.post('/', async (req, res) => {
   const newUser = req.body;
   const requiredKeys = ['first_name'];
-  console.log(newUser);
   if (requiredKeys.every((key) => key in newUser)) {
     try {
       const result = await usersDB.insert(newUser);
-      console.log(result);
       res.json({
         message: `user added: ${JSON.stringify(newUser)}`,
         result,

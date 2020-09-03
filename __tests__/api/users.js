@@ -1,11 +1,11 @@
 const request = require('supertest');
 const { app, initialize } = require('../../src/app');
 
-beforeAll(() => {
-  return initialize();
-});
-
 describe('Test the users endpoint', () => {
+  beforeAll(() => {
+    return initialize();
+  });
+
   test('It should response the GET a user', async () => {
     const response = await request(app).get('/users');
     expect(response.headers['content-type']).toContain('application/json');

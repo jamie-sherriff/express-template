@@ -13,5 +13,7 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
     'arrow-body-style': 'off',
+    'no-plusplus': 'off',
+    'max-len': ['error', 140],
   },
 };
